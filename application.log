@@ -1,0 +1,6 @@
+2022-10-04 16:06:28.989  INFO 12768 --- [restartedMain] c.e.s.SpringAddressBookAppApplication    : Starting SpringAddressBookAppApplication using Java 18.0.1.1 on DESKTOP-K0BSPDB with PID 12768 (C:\Users\HP\IdeaProjects\Spring_Address_Book_App\target\classes started by root in C:\Users\HP\IdeaProjects\Spring_Address_Book_App)
+2022-10-04 16:06:29.007 DEBUG 12768 --- [restartedMain] c.e.s.SpringAddressBookAppApplication    : Running with Spring Boot v2.7.4, Spring v5.3.23
+2022-10-04 16:06:29.009  INFO 12768 --- [restartedMain] c.e.s.SpringAddressBookAppApplication    : The following 1 profile is active: "dev"
+2022-10-04 16:06:42.483  WARN 12768 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-04 16:06:43.387  WARN 12768 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-10-04 16:06:43.950  INFO 12768 --- [restartedMain] c.e.s.SpringAddressBookAppApplication    : Started SpringAddressBookAppApplication in 16.319 seconds (JVM running for 19.554)
