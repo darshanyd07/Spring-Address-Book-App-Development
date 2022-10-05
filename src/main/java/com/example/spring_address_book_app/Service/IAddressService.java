@@ -20,4 +20,8 @@ public interface IAddressService
     List<Address_Book> getActiveUsers(String isActive);
 
     List<Address_Book> getPenaltyPerson(int penalty);
+    List<Address_Book> getPenaltyPersonLess(int penalty);
+    List<Address_Book> UsersByCityName(String city);
+//    List<Address_Book> findTopPenalty();
+   // List<Address_Book> getCityState(String city,String state);
 }

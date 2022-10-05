@@ -88,4 +88,33 @@ public class AddressController
         return new ResponseEntity<>(responseDTO, HttpStatus.OK);
     }
 
+    @GetMapping("/GetLessThenPenalty/{penalty}")
+    public ResponseEntity<ResponseDTO> getPenaltyPersonLess(@PathVariable int penalty)
+    {
+        ResponseDTO responseDTO = new ResponseDTO(" All Active Person  Data Successfully.......", iAddressService.getPenaltyPersonLess(penalty));
+        log.info("Get Person Id : "+penalty+"  Data Successfully.......");
+        return new ResponseEntity<>(responseDTO, HttpStatus.OK);
+    }
+    @GetMapping("/getByCityName/{city}")
+    public ResponseEntity<ResponseDTO> UsersByCityName(@PathVariable String city)
+    {
+        ResponseDTO responseDTO = new ResponseDTO(city+" Employee All Data Successfully.......", iAddressService.UsersByCityName(city));
+        log.info("Get Employee City : "+city+"  Data Successfully.......");
+        return new ResponseEntity<>(responseDTO, HttpStatus.OK);
+    }
+//    @GetMapping("/GetTopPenalty")
+//    public ResponseEntity<ResponseDTO> findTopPenalty()
+//    {
+//        ResponseDTO responseDTO = new ResponseDTO(" All Active Person  Data Successfully.......", iAddressService.findTopPenalty());
+//        log.info("Get Top Penalty Data Successfully.......");
+//        return new ResponseEntity<>(responseDTO, HttpStatus.OK);
+//    }
+//    @GetMapping("/GetCityState/{city}/{state}")
+//    public ResponseEntity<ResponseDTO> getCityState(@PathVariable String city,@PathVariable String state)
+//    {
+//        ResponseDTO responseDTO = new ResponseDTO(" All Active Person  Data Successfully.......", iAddressService.getCityState(city,state));
+//        log.info("Get City & State Data Successfully.......");
+//        return new ResponseEntity<>(responseDTO, HttpStatus.OK);
+//    }
+
 }

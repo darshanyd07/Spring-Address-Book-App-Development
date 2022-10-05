@@ -33,7 +33,6 @@ public class AddressService implements IAddressService
             throw new CustomException("No Person In Database.");
 
         } else return addressRepository.findAll();
-
     }
     public Optional<Address_Book> getById(int id)
     {
@@ -101,5 +100,38 @@ public class AddressService implements IAddressService
 
         } else return addressRepository.getPenaltyPerson(penalty);
     }
+
+    public List<Address_Book> getPenaltyPersonLess(int penalty)
+    {
+        if (addressRepository.getPenaltyPersonLess(penalty).isEmpty())
+        {
+
+            log.info("----------- No "+penalty+" More Than Penalty  Persons  In Database.------------");
+            throw new CustomException("No "+penalty+" More Than Penalty  Persons  In Database.");
+
+        } else return addressRepository.getPenaltyPersonLess(penalty);
+    }
+
+//    public List<Address_Book> findTopPenalty()
+//    {
+//        return addressRepository.findByPenalty();
+//    }
+
+//   public List<Address_Book> getCityState(String city,String state)
+//    {
+//        return addressRepository.getCityState(city,state);
+//
+//    }
+public List<Address_Book> UsersByCityName(String city)
+{
+    if (addressRepository.getUsersByCityName(city).isEmpty())
+    {
+
+        log.info("----------- No city Name Present In Database.------------");
+        throw new CustomException("No city Name Present In Database.");
+
+    } else return addressRepository.getUsersByCityName(city);
+
+}
 
 }
